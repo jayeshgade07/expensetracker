@@ -15,7 +15,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173', // Vite standard React development port
+  origin: [
+    'http://localhost:5173',
+    'https://expensetracker-ten-beta.vercel.app'
+  ],
   credentials: true,
 }));
 app.use(express.json());
